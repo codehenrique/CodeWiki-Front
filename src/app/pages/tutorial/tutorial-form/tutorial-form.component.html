@@ -1,0 +1,65 @@
+<div class="ui modal">
+  <div class="header">
+    Tutorial
+  </div>
+  <div class="content">
+    <div class="ui very padded fluid card">
+      <div class="ui very padded segment">
+        <div class="content">
+          <form class="ui form" [formGroup]="tutorialForm">
+            <h4 class="ui dividing header">
+              Insira as informações do tutorial
+            </h4>
+            <div class="field">
+              <label>Título</label>
+              <input formControlName="title" type="text" placeholder="Insira um título..." />
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Assunto</label>
+                <input formControlName="subject" type="text" placeholder="Insira um assunto..." />
+              </div>
+              <div class="field">
+                <label>Observação</label>
+                <input formControlName="observation" type="text" placeholder="Insira uma observação..." />
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Categoria</label>
+                <select formControlName="categoryId" class="ui fluid dropdown">
+                  <option value="">-- Selecione --</option>
+                  <option value="1">Back-End</option>
+                  <option value="2">Front-End</option>
+                  <option value="3">Design Patterns</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Subcategoria</label>
+                <select formControlName="subcategoryId" class="ui fluid dropdown">
+                  <option value="">-- Selecione --</option>
+                  <option value="1">.NET</option>
+                  <option value="2">Angular 2+</option>
+                  <option value="3">MVC</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Conteúdo</label>
+              <textarea
+                rows="2"
+                formControlName="content"
+                placeholder="Desenvolva aqui o conteúdo do seu tutorial..."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="negative ui button">Cancelar</div>
+    <div class="positive ui button">Salvar</div>
+  </div>
+</div>
